@@ -1,3 +1,11 @@
+.lightContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
 .stopLight {
     display: flex;
     width: 200px;
@@ -12,29 +20,36 @@
 
 .red {
     background-color: #B81D13;
+    transition: box-shadow .5s;
 }
 .red.lit {
     box-shadow: 0 0 30px 5px #B81D13;
+    transition: box-shadow .5s;
 }
 
 .yellow {
     background-color: #EFB700;
+    transition: box-shadow .5s;
 }
 .yellow.lit{
     box-shadow: 0 0 30px 5px #EFB700;
+    transition: box-shadow .5s;
 }
 
 .green {
     background-color: #008450;
+    transition: box-shadow .5s;
 }
 .green.lit{
     box-shadow: 0 0 30px 5px #008450;
+    transition: box-shadow .5s;
 }
 
 .light {
     flex-basis: 200px;
     border-radius: 50%;
     filter:brightness(25%);
+    transition: filter .25s, border .5s;
     border: 2px solid #666;
 }
 
