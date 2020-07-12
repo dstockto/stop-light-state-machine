@@ -5,7 +5,7 @@ import StopLight from "./StopLight";
 
 function App() {
     const [lights, setLights] = useState(1);
-    const maxLights = 14;
+    const maxLights = 30        ;
     const minLights = 0;
 
     const inc = () => {

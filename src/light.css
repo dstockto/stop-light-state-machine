@@ -8,10 +8,8 @@
 
 .stopLight {
     display: flex;
-    width: 200px;
-    height: 680px;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     background: rgb(45,45,45);
     background: linear-gradient(90deg, rgba(12,12,12,1) 0%, rgba(45,45,45,1) 35%, rgba(78,78,78,1) 100%);
     padding: 1em;
@@ -24,7 +22,6 @@
 }
 .red.lit {
     box-shadow: 0 0 30px 5px #B81D13;
-    transition: box-shadow .5s;
 }
 
 .yellow {
@@ -33,7 +30,6 @@
 }
 .yellow.lit{
     box-shadow: 0 0 30px 5px #EFB700;
-    transition: box-shadow .5s;
 }
 
 .green {
@@ -42,18 +38,22 @@
 }
 .green.lit{
     box-shadow: 0 0 30px 5px #008450;
-    transition: box-shadow .5s;
 }
 
 .light {
-    flex-basis: 200px;
+    flex-basis: 100px;
     border-radius: 50%;
     filter:brightness(25%);
     transition: filter .25s, border .5s;
     border: 2px solid #666;
+    width: 100px;
+    height: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .lit {
     filter: brightness(100%);
     border: none;
+    transition: box-shadow .5s;
 }
