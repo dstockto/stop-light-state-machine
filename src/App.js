@@ -7,7 +7,7 @@ function App() {
     const [lights, setLights] = useState(1);
 
     const inc = () => {
-         setLights(Math.min(6, lights + 1));
+         setLights(Math.min(14, lights + 1));
     }
     const dec = () => {
         setLights(Math.max(1, lights - 1));
@@ -16,7 +16,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <div style={{display:'flex'}}>
+                <button onClick={inc}>Add</button>
+                <button onClick={dec}>Dec</button>
+                <div className={'lightContainer'}>
                     {
                         Array.apply(null, Array(lights)).map((_, i) => (
                                 <StopLight key={i} />
@@ -24,8 +26,6 @@ function App() {
                         )
                     }
                 </div>
-                <button onClick={inc}>Add</button>
-                <button onClick={dec}>Dec</button>
             </header>
         </div>
     );
